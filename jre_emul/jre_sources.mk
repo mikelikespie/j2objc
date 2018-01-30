@@ -406,6 +406,8 @@ JAVA_PUBLIC_SOURCES_CORE = \
   java/util/UnsafeArrayList.java \
   java/util/Vector.java \
   java/util/WeakHashMap.java \
+  dalvik/system/BlockGuard.java \
+  dalvik/system/CloseGuard.java \
   java/util/concurrent/AbstractExecutorService.java \
   java/util/concurrent/CancellationException.java \
   java/util/concurrent/ConcurrentHashMap.java \
@@ -520,8 +522,6 @@ JAVA_PRIVATE_SOURCES_CORE = \
   com/google/j2objc/nio/charset/IconvCharsetDecoder.java \
   com/google/j2objc/nio/charset/IconvCharsetEncoder.java \
   com/google/j2objc/util/NativeTimeZone.java \
-  dalvik/system/BlockGuard.java \
-  dalvik/system/CloseGuard.java \
   java/io/EmulatedFields.java \
   java/io/EmulatedFieldsForDumping.java \
   java/io/EmulatedFieldsForLoading.java \
