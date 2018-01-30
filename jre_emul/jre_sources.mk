@@ -1205,6 +1205,7 @@ JAVA_PUBLIC_SOURCES_SECURITY = \
   javax/security/cert/CertificateNotYetValidException.java \
   javax/security/cert/CertificateParsingException.java \
   sun/security/x509/AlgorithmId.java \
+  sun/security/util/DerEncoder.java \
   javax/security/cert/X509Certificate.java
 
 JAVA_PRIVATE_SOURCES_SECURITY = \
@@ -1285,7 +1286,6 @@ JAVA_PRIVATE_SOURCES_SECURITY = \
   sun/security/util/ByteArrayTagOrder.java \
   sun/security/util/Cache.java \
   sun/security/util/Debug.java \
-  sun/security/util/DerEncoder.java \
   sun/security/util/DerIndefLenConverter.java \
   sun/security/util/DerInputBuffer.java \
   sun/security/util/DerInputStream.java \
