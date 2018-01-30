@@ -1204,6 +1204,7 @@ JAVA_PUBLIC_SOURCES_SECURITY = \
   javax/security/cert/CertificateExpiredException.java \
   javax/security/cert/CertificateNotYetValidException.java \
   javax/security/cert/CertificateParsingException.java \
+  sun/security/x509/AlgorithmId.java \
   javax/security/cert/X509Certificate.java
 
 JAVA_PRIVATE_SOURCES_SECURITY = \
@@ -1299,7 +1300,6 @@ JAVA_PRIVATE_SOURCES_SECURITY = \
   sun/security/util/ResourcesMgr.java \
   sun/security/util/UntrustedCertificates.java \
   sun/security/x509/AccessDescription.java \
-  sun/security/x509/AlgorithmId.java \
   sun/security/x509/AttributeNameEnumeration.java \
   sun/security/x509/AuthorityInfoAccessExtension.java \
   sun/security/x509/AuthorityKeyIdentifierExtension.java \
