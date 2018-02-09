@@ -19,3 +19,6 @@ dist/
 # IntelliJ IDEA Files
 *.iml
 .idea
+
+# Bazel
+bazel-*
