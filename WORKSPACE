@@ -21,7 +21,6 @@ maven_jar(
     artifact = 'junit:junit:4.12',
 )
 
-
 maven_jar(
     name = "com_google_code_findbugs_jsr30",
     artifact = 'com.google.code.findbugs:jsr305:3.0.2',
