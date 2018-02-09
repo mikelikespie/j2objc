@@ -1,5 +1,5 @@
 java_library(
-  name = "annotations",
-  srcs = glob(["*.java"]),
-  visibility = ["//visibility:public"],
+    name = "annotations",
+    srcs = glob(["*.java"]),
+    visibility = ["//visibility:public"],
 )
