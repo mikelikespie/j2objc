@@ -1,0 +1,9 @@
+alias(
+    name = "jre_emul_jar",
+    actual = "@//jre_emul:all_jre"
+)
+
+alias(
+    name = "jre_core_lib",
+    actual = "@//jre_emul:jre_core_lib"
+)

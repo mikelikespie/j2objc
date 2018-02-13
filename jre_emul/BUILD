@@ -7,6 +7,7 @@ load(
     "JAVA_PRIVATE_SOURCES_CONCURRENT",
     "EMULATED_JAVA_SOURCES",
     "SOURCE_RETENTION_ANNOTATIONS",
+    "PUBLIC_NATIVE_HEADERS",
 )
 load("//tools/build_defs/j2objc:j2objc_jre_library.bzl", "j2objc_jre_library")
 
@@ -16,7 +17,7 @@ load(
 )
 
 java_library(
-    name = "all_jre_lib",
+    name = "all_jre",
     srcs = JAVA_SOURCES + EMULATED_JAVA_SOURCES + SOURCE_RETENTION_ANNOTATIONS,
     javacopts = [
         "-XepDisableAllChecks",
@@ -26,10 +27,6 @@ java_library(
     ]
 )
 
-java_import(
-    name = "all_jre",
-    jars = ["liball_jre_lib.jar"],
-)
 default_java_toolchain(
     name = "jre_compile_java_toolchain",
     javac = ["@bazel_tools//third_party/java/jdk/langtools:javac_jar"],
@@ -46,9 +43,15 @@ j2objc_jre_library(
     ],
 )
 
+objc_library(
+    name = "public_native_headers",
+    hdrs = PUBLIC_NATIVE_HEADERS,
+    includes = ["Classes"],
+)
+
 j2objc_jre_library(
     name = "jre_core",
-    srcs = JAVA_PUBLIC_SOURCES_CORE,
+    srcs = JAVA_SOURCES,
     emulated_srcs = EMULATED_JAVA_SOURCES,
     javacopts = [
         "-XepDisableAllChecks",
@@ -57,6 +60,7 @@ j2objc_jre_library(
     private_srcs = JAVA_PRIVATE_SOURCES_CORE,
     deps = [
         "//annotations/src/main/java/com/google/j2objc/annotations",
+        ":public_native_headers",
     ],
 )
 

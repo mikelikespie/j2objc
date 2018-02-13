@@ -8,7 +8,7 @@ JRE_SOURCES_FILE = os.path.join(JRE_EMUL_DIR, "jre_sources.mk")
 
 section_start = re.compile(r'(\w.*) = \\')
 empty_section = re.compile(r'(\w.*) =$')
-header_re = re.compile(r'^ {2}([\w_/.]*) ?\\?$')
+header_re = re.compile(r'^ {2}([+\w_/.]*) ?\\?$')
 var_re = re.compile(r' +\$\((\w.*)\)(?: \\)?')
 one_line_var_re = re.compile(r'(\w.*) =(?: \$\(([\w_]*)\))+')
 one_line_var_elements = re.compile(r' \$\(([\w_]*)\)')
